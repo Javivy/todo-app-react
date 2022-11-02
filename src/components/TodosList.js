@@ -1,6 +1,7 @@
 /* eslint-disable no-useless-constructor */
 /* eslint-disable class-methods-use-this */
 import React from 'react';
+import TodoItem from './TodoItem.js';
 
 class TodosList extends React.Component {
   constructor(props) {
@@ -9,7 +10,15 @@ class TodosList extends React.Component {
 
   render() {
     return (
-      <h1>Hello from TodosList</h1>
+      <ul>
+        {this.props.todos.map((todo) => (
+          <TodoItem
+          key={todo.id} todo={todo}
+          handleChangeProps={this.props.handleChangeProps}
+          deleteTodoProps={this.props.deleteTodoProps}
+          />
+        ))}
+      </ul>
     );
   }
 }
