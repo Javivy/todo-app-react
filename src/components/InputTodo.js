@@ -1,5 +1,5 @@
 /* eslint-disable class-methods-use-this */
-import React, { Component } from 'react';
+import { Component } from 'react';
 
 class InputTodo extends Component {
   state = {
@@ -26,14 +26,15 @@ class InputTodo extends Component {
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
+      <form onSubmit={this.handleSubmit} className='form-container'>
         <input
         type="text" placeholder="Add Todo..."
+        className='input-text'
         value={this.state.title}
         onChange={this.onChange}
         name="title"
         />
-        <button>Submit</button>
+        <button className='input-submit'>Submit</button>
       </form>
     );
   }
