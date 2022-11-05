@@ -65,3 +65,8 @@ body {
   box-shadow: 0 1px 6px 0 rgba(168, 167, 167, 0.28);
   border-radius: calc(0.5 * 100px);
 }
+
+.active-link {
+  color: orangered;
+  text-decoration: underline;
+}
