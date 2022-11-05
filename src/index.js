@@ -1,5 +1,14 @@
 /* eslint-disable no-unused-vars */
-import ReactDOM from 'react-dom';
-import TodoContainer from './components/ToDoContainer.js';
+import React from 'react';
+import { BrowserRouter } from 'react-router-dom';
+import ReactDOM from 'react-dom/client';
+import TodoContainer from './functionBased/components/ToDoContainer.js';
+//* Stylesheet
+import './functionBased/App.css';
 
-ReactDOM.render(<TodoContainer />, document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <BrowserRouter>
+    <TodoContainer />
+  </BrowserRouter>,
+);
